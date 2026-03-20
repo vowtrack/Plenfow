@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "For premium smooth page transitions and step animations"
+  "date-fns": "For date formatting in the date picker"
+  "react-day-picker": "Required for the calendar component"
+
+images:
+  - path: "artifacts/plenfow/public/images/hero-abstract.png"
+    description: "Dark premium abstract background with subtle flowing gold dust and light leaks, very minimal, extremely dark"
+    aspect_ratio: "16:9"
+  - path: "artifacts/plenfow/public/images/login-bg.png"
+    description: "Elegant dark textured background with a faint gold geometric overlay, highly professional and luxurious"
+    aspect_ratio: "16:9"
+
+notes:
+  - Frontend only application with mock state
+  - Using wouter for routing
+  - Force dark mode at the root level to satisfy premium dark theme requirement
