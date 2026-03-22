@@ -1,0 +1,97 @@
+/* Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* ============================================================
+   CSS Variables — Warna tema premium dark + gold
+   ============================================================ */
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --bg-hover: #1a1a1a;
+  --border: rgba(255,255,255,0.08);
+  --text: #fafafa;
+  --text-muted: #888888;
+  --gold: #C9A84C;
+  --gold-light: #e0c06e;
+  --gold-dim: rgba(201, 168, 76, 0.15);
+  --radius: 8px;
+}
+
+/* ============================================================
+   Base styles
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ============================================================
+   Reusable component classes
+   Dibuat sebagai @layer supaya bisa di-override Tailwind
+   ============================================================ */
+@layer components {
+
+  /* Tombol utama (warna emas) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all duration-200;
+    background-color: var(--gold);
+    color: #0a0a0a;
+  }
+  .btn-primary:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-1px);
+  }
+
+  /* Tombol outline/ghost */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200;
+    color: var(--text-muted);
+    background: transparent;
+  }
+  .btn-ghost:hover {
+    color: var(--text);
+  }
+
+  /* Input field */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg text-sm outline-none transition-colors duration-200;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .input-field::placeholder {
+    color: var(--text-muted);
+  }
+  .input-field:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.07);
+  }
+
+  /* Card container */
+  .card {
+    @apply rounded-xl p-6;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+  }
+
+  /* Label untuk form */
+  .form-label {
+    @apply block text-sm font-medium mb-2;
+    color: rgba(255,255,255,0.7);
+  }
+}
