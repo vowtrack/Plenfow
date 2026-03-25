@@ -26,10 +26,14 @@ export function LoginPage() {
     // --------------------------------------------------------
 
     // Sementara: langsung redirect ke onboarding (frontend demo)
-    setTimeout(() => {
-      setLoading(false);
-      setLocation("/onboarding");
-    }, 800);
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+if (error) {
+  alert(error.message);
+  setLoading(false);
+  return;
+}
+setLocation("/onboarding");
+setLoading(false);
   };
 
   return (
