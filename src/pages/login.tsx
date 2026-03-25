@@ -1,8 +1,3 @@
-// ============================================================
-// src/pages/login.tsx
-// Halaman login. Saat ini masih frontend-only (belum konek Supabase).
-// Setelah Supabase disetup, fungsi handleLogin perlu diupdate.
-// ============================================================
 import { supabase } from "../lib/supabase";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
@@ -18,22 +13,14 @@ export function LoginPage() {
     e.preventDefault();
     setLoading(true);
 
-    // --------------------------------------------------------
-    // TODO: Ganti bagian ini dengan Supabase auth setelah setup
-    // Contoh nanti:
-    // const { error } = await supabase.auth.signInWithPassword({ email, password });
-    // if (error) { alert(error.message); return; }
-    // --------------------------------------------------------
-
-    // Sementara: langsung redirect ke onboarding (frontend demo)
     const { error } = await supabase.auth.signInWithPassword({ email, password });
-if (error) {
-  alert(error.message);
-  setLoading(false);
-  return;
-}
-setLocation("/onboarding");
-setLoading(false);
+    if (error) {
+      alert(error.message);
+      setLoading(false);
+      return;
+    }
+    setLocation("/onboarding");
+    setLoading(false);
   };
 
   return (
