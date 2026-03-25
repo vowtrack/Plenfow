@@ -91,7 +91,7 @@ export function LandingPage() {
               The all-in-one platform designed specifically for professional Wedding & Event Organizers to scale their business.
             </p>
 
-            <Link href="/login" className="btn-primary text-base px-8 py-4">
+            <Link href="/register" className="btn-primary text-base px-8 py-4">
               Get Started Free
             </Link>
           </motion.div>
