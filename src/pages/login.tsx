@@ -3,6 +3,7 @@
 // Halaman login. Saat ini masih frontend-only (belum konek Supabase).
 // Setelah Supabase disetup, fungsi handleLogin perlu diupdate.
 // ============================================================
+import { supabase } from "../lib/supabase";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
