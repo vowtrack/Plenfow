@@ -104,7 +104,7 @@ export function LoginPage() {
 
           <p className="mt-8 text-center text-sm" style={{ color: "var(--text-muted)" }}>
             Don't have an account?{" "}
-            <Link href="#" className="no-underline" style={{ color: "var(--gold)" }}>
+            <Link href="/register" className="no-underline" style={{ color: "var(--gold)" }}>
               Register here
             </Link>
           </p>
