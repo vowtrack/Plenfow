@@ -28,7 +28,7 @@ export function Navbar() {
           <Link href="/login" className="text-sm font-medium no-underline transition-colors" style={{ color: "var(--text-muted)" }}>
             Login
           </Link>
-          <Link href="/login" className="btn-primary text-sm px-5 py-2">
+          <Link href="/register" className="btn-primary text-sm px-5 py-2">
             Get Started
           </Link>
         </div>
